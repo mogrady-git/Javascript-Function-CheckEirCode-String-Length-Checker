@@ -3,30 +3,31 @@
 
 <title>String Functions</title>
 <script>
-var EirCode
+//check eircode
+
+var EirCode;
 function EnterEirCode()
 {
-EirCode = prompt( "Please Enter Your Eir Code", "e.g H87 X4RD");
+	EirCode = prompt( "Please Enter Your Eir Code", "e.g H87 X4RD");
 }
 function CheckEirCode(EirCode)
 {
-if (EirCode.length >=8)
-return true
-else
-return false
+	if (EirCode.length >=8)
+	return true
+	else
+	return false
 }
 
 </script>
 </head>
-
 <body>
 <script>
 EnterEirCode()
-
+// calculates characters
 while (!CheckEirCode(EirCode))
 {
-alert("Eir Code Has Too Few Characters.");
-EnterEirCode();
+	alert("Eir Code Has Too Few Characters.");
+	EnterEirCode();
 }
 
 alert("Thanks For Entering Your Eir Code.");
