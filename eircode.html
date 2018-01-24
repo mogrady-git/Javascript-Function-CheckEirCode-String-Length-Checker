@@ -1,15 +1,37 @@
 <html>
-<body>
+<head>
 
-<h1>Eircode input</h1>
-
+<title>String Functions</title>
 <script>
-
-Eircode = prompt( "Please Enter Your Eir Code", "e.g H87 F3DG");
-
-document.write("<p>Your Eircode is " +Eircode + "</p>");
+var EirCode
+function EnterEirCode()
+{
+EirCode = prompt( "Please Enter Your Eir Code", "e.g H87 X4RD");
+}
+function CheckEirCode(EirCode)
+{
+if (EirCode.length >=8)
+return true
+else
+return false
+}
 
 </script>
+</head>
 
+<body>
+<script>
+EnterEirCode()
+
+while (!CheckEirCode(EirCode))
+{
+alert("Eir Code Has Too Few Characters.");
+EnterEirCode();
+}
+
+alert("Thanks For Entering Your Eir Code.");
+document.write("Goodbye");
+
+</script>
 </body>
 </html>
